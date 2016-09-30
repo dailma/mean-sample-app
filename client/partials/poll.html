@@ -1,0 +1,36 @@
+<div class="header" ng-init="verify()">
+	<a href="#/dashboard">Cancel</a> | 
+	<a href="" ng-click="logout()">Log out</a>
+</div>
+<div ng-init="getQuestion()">
+	<h3>{{ question.content }}</h3>
+	<p>Click the Vote button to choose one</p>
+	<p ng-show="voteConfirm">Vote counted</p>
+	<table>
+		<tr>
+			<th>Option</th>
+			<th>Current count of votes</th>
+			<th>Action</th>
+		</tr>
+		<tr>
+			<th>{{ question.option1 }}</th>
+			<th>{{ question.vote1 }}</th>
+			<th><button ng-click="vote(1)">Vote</button></th>
+		</tr>
+		<tr>
+			<th>{{ question.option2 }}</th>
+			<th>{{ question.vote2 }}</th>
+			<th><button ng-click="vote(2)">Vote</button></th>
+		</tr>
+		<tr>
+			<th>{{ question.option3 }}</th>
+			<th>{{ question.vote3 }}</th>
+			<th><button ng-click="vote(3)">Vote</button></th>
+		</tr>
+		<tr>
+			<th>{{ question.option4 }}</th>
+			<th>{{ question.vote4 }}</th>
+			<th><button ng-click="vote(4)">Vote</button></th>
+		</tr>
+	</table>
+</div>

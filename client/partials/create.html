@@ -1,0 +1,22 @@
+<div class="header" ng-init="verify()">
+	<a href="#/dashboard">Cancel</a> | 
+	<a href="" ng-click="logout()">Log out</a>
+</div>
+<h3>Put the question and options here</h3>
+<form ng-submit="addQuestion()">
+	<div class="side_by_side">
+		<label for="question.content">Question</label>
+		<label for="question.option1">Option 1</label>
+		<label for="question.option2">Option 2</label>
+		<label for="question.option3">Option 3</label>
+		<label for="question.option4">Option 4</label>
+	</div>
+	<div class="side_by_side">
+		<input class="question" type="text" ng-model="question.content" ng-required="true" ng-minlength="8">
+		<input type="text" ng-model="question.option1" ng-required="true" ng-minlength="3">
+		<input type="text" ng-model="question.option2" ng-required="true" ng-minlength="3">
+		<input type="text" ng-model="question.option3" ng-required="true" ng-minlength="3">
+		<input type="text" ng-model="question.option4" ng-required="true" ng-minlength="3">
+		<input type="submit" value="Create poll">
+	</div>
+</form>

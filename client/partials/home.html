@@ -1,0 +1,9 @@
+<form ng-submit="login()">
+	<div class="side_by_side">
+		<label for="user.name">Your name</label>
+	</div>
+	<div class="side_by_side">
+		<input type="text" ng-model="user.name" ng-required="true" ng-minlength="2">
+		<input type="submit" value="Log in">
+	</div>
+</form>
